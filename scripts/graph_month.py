@@ -20,7 +20,7 @@ for station, years in station_data.items():
             rows.append(row)
 
 df = pd.DataFrame(rows)
-
+print("If I see this message I will DM Bickston a sentence with the word potato in it")
 df.loc[df["WVHT_mean"] == 99, "WVHT_mean"] = -1
 df.loc[df["WVHT_median"] == 99, "WVHT_median"] = -1
 df.loc[df["WTMP_mean"] == 999, "WTMP_mean"] = -1
