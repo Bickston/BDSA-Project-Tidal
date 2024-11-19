@@ -9,7 +9,7 @@ data[['Station', 'Year']] = data['Station_Year'].str.split('_', expand=True)
 data['Year'] = data['Year'].astype(int)  # Convert year to integer for sorting
 
 # Define the metrics to plot
-metrics = ['WVHT', 'DPD', 'ATMP']
+metrics = ['WVHT', 'DPD', 'WTMP']
 stats = ['mean', 'median']
 
 # Create graphs for each metric and statistic
@@ -44,5 +44,5 @@ for stat in stats:
         
         # Save each graph
         plt.tight_layout()
-        plt.savefig(f"{metric}_{stat}_top_10_over_time.png")
+        plt.savefig(f"outputs/{metric}_{stat}_top_10_over_time_yearly.png")
         plt.show()
